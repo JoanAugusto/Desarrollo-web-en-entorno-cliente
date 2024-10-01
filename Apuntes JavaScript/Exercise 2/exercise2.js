@@ -18,24 +18,30 @@ function manyImages() {
   // Incrementa el índice actual
   indiceActual = (indiceActual + 1) % imagenes.length;
 
-  // Usa switch para cambiar la imagen
-  switch (indiceActual) {
-    case 0:
-      $image.src = imagenes[0];
-      break;
-    case 1:
-      $image.src = imagenes[1];
-      break;
-    case 2:
-      $image.src = imagenes[2];
-      break;
-    case 3:
-      $image.src = imagenes[3];
-      break;
-    default:
-      console.log('ERROR: Índice fuera de rango');
+  
+
+    switch (indiceActual) {
+      case 0:
+        $image.src = imagenes[0];
+        break;
+      case 1:
+        $image.src = imagenes[1];
+        break;
+      case 2:
+        $image.src = imagenes[2];
+        break;
+      case 3:
+        $image.src = imagenes[3];
+        break;
+      default:
+        
+    }
+
   }
-}
+
+  
+  
+
 
 $image.addEventListener('click', manyImages);
 $boton.addEventListener('click', manyImages);
