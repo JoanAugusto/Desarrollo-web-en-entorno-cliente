@@ -53,7 +53,8 @@ admin, ¿cómo llevas tus 23 primaveras?" o "Bienvenido miguelón,
 
         }else if(input== 'admin' && contraseñaUsuario=='mira:m3'){
             console.log(`BIENVENIDO ${input} HAS ACCEDIDO CORRECTAMENTE`);
-                const edad=prompt("Introduce la edad:");
+                
+            const edad=prompt("Introduce la edad:");
                 if(edad===null){
                     console.log("Programa cancelado por el usuario.");
                 }else if(edad>23){
