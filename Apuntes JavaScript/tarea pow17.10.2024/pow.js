@@ -1,10 +1,10 @@
 'use strict'
 
-function pow(x,n){//cuando vaya a comparar , primieros comparamos antes de dr el resultado
+function pow(x,n){//cuando vaya a comparar , primieros comparamos antes de dar el resultado
 
     let resultx=x;
     if(n===0) return 1;
-    if(n<0) return x/-n;
+    if(n<0) return x/-n;//devuelve uno
 
     for(let i=1;i<n;i++){//recorrido del n solicitado
                         
