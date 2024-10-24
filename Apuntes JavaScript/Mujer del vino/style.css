@@ -1,0 +1,44 @@
+body,html{
+    width: 99%;
+    height: 99%;
+    background: black;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 1fr 1fr 1fr ;
+    grid-template-rows: 1.3fr 2fr 2fr 2fr 1.3fr;
+    background:white;
+    
+    
+}
+    
+.womenZone{
+    background:red;
+    grid-row: 1/6;
+    
+    
+}
+.womenZone2{
+    background:red;
+    
+   
+    
+}
+.womenZone3{
+    background:red;
+    
+  grid-row: -2/-1;
+    
+}
+
+.container-img{
+    background: yellowgreen;
+    grid-row-start:2;
+    grid-row-end:5 ;
+    
+    grid-column-start: 2;
+    grid-column-end:5 ;
+
+    
+}
