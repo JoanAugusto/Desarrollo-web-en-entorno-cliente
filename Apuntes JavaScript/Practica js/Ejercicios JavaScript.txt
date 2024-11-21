@@ -1,0 +1,80 @@
+Ejercicios JavaScript
+
+1. Fundamentos de JavaScript
+Operaciones básicas: Escribe un programa que tome dos números introducidos por el usuario y realice operaciones de suma, resta, multiplicación y división. Muestra los resultados en la consola.
+
+Condicionales: Crea un programa que determine si un número ingresado es positivo, negativo o cero, y muestra el resultado.
+Funciones básicas: Escribe una función llamada saludar(nombre) que reciba un nombre como argumento y devuelva un mensaje de saludo, por ejemplo, “Hola, Joan!”.
+Conversión de tipos: Crea una función que reciba un valor y lo convierta a número, string o booleano dependiendo de un segundo argumento (ej., convertir(valor, "string")).
+
+
+2. Objetos: lo básico
+Objeto persona: Crea un objeto llamado persona con propiedades como nombre, edad, y ciudad. Crea una función que recorra cada propiedad del objeto e imprima su clave y valor.
+
+Comparación de objetos: Escribe una función que reciba dos objetos y compare sus propiedades para ver si son iguales.
+
+Añadir propiedades dinámicamente: Escribe una función que reciba un objeto vacío y le añada propiedades (nombre, edad, etc.) con valores que tú mismo determines.
+
+3. Tipos de datos: Números
+
+Aleatoriedad: Crea una función que devuelva un número aleatorio entre dos valores dados.
+
+Redondeo personalizado: Escribe una función redondear(numero, decimales) que reciba un número y lo redondee a una cantidad de decimales especificada por el usuario.
+
+Promedio de números: Escribe un programa que reciba varios números en una array y calcule su promedio.
+
+4. Tipos de datos: Strings
+
+Formato de texto: Crea una función que reciba una oración y devuelva la oración en formato Title Case (cada palabra con la primera letra en mayúscula).
+
+Contador de palabras: Escribe una función que reciba una frase y cuente el número de palabras en ella.
+
+Sustitución de caracteres: Crea una función que reciba una cadena de texto y sustituya todas las vocales por un símbolo específico (ej., @, #, etc.).
+
+5. Tipos de datos: Arrays
+
+Invertir elementos: Crea una función que reciba un array y devuelva un nuevo array con los elementos en orden inverso.
+
+Buscar en array: Escribe una función que reciba un array de números y devuelva true si un número específico está en el array, o false si no.
+
+Concatenación de arrays: Crea una función que reciba dos arrays y los combine en uno solo sin usar métodos integrados de concatenación.
+
+Reto adicional (sin usar bucles): Dado un array de números, encuentra el valor más alto y el más bajo.
+
+6. JavaScript Object Constructors (W3Schools)
+
+Crear constructores: Crea un constructor llamado Producto que reciba propiedades como nombre, precio, y cantidad. Instancia varios objetos de Producto con diferentes valores.
+
+Métodos dentro del constructor: Añade un método al constructor Producto llamado aplicarDescuento que reciba un porcentaje y calcule el precio del producto después de aplicar el 
+descuento.
+Contador de instancias: Añade una propiedad estática en el constructor Producto que cuente cuántas instancias se han creado.
+
+Ejercicios básicos con arrays 
+
+Crear y manipular un array:
+
+Declara un array con los números del 1 al 5.
+Usa push para añadir el número 6 y pop para eliminar el último número.
+Usa shift para eliminar el primer número y unshift para añadir el número 0 al inicio.
+
+Operaciones simples:
+
+Crea un array de 5 palabras. Usa un bucle for para recorrerlo y mostrar cada palabra en la consola.
+Escribe una función que reciba un array de números y devuelva la suma de todos los elementos. Usa un bucle for para calcular la suma.
+Métodos de arrays hasta .forEach
+
+Manipulación de arrays con métodos:
+
+Dado el array [10, 20, 30, 40, 50]:
+Usa slice para obtener los números 20, 30 y 40.
+Usa splice para eliminar el número 30 y reemplazarlo por 35.
+
+Transformación directa con .forEach:
+
+Crea un array de nombres y usa .forEach para imprimir un mensaje personalizado para cada nombre (por ejemplo, "Hola, Joan").
+Dado un array de números [1, 2, 3, 4, 5], usa .forEach para calcular la suma de todos los números.
+
+Ejercicio práctico con .forEach:
+
+Dado un array de precios [100, 200, 300], usa .forEach para incrementar cada precio en un 15% y muestra el resultado de cada precio incrementado en la consola.
+Usa .forEach para recorrer un array de nombres y contar cuántos nombres tienen más de 4 letras.
