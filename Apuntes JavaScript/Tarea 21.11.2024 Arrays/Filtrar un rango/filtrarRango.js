@@ -3,6 +3,7 @@
 function filterRange(arr=[],a,b){
     
     const arr1=[]
+    
     for (let i=0;i<=arr.length;i++){
         
         if( arr[i] <= b && arr[i] >= a){
@@ -10,6 +11,7 @@ function filterRange(arr=[],a,b){
             arr1.push(arr[i]);
             //ArrayAux[arrayAux.length]=arr[i];
             //debemos pensar en bajo y buscar lo sencillo 
+            
         
         }
        
