@@ -9,6 +9,7 @@ function Compared(arr,arr2){
     //Utilizamos un solo for in
     for (let key1 in arr){
         arrKey += key1;
+       
         value1 += arr[key1];
     }
     for (let key2 in arr2){
