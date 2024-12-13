@@ -1,3 +1,4 @@
+'use strict'
 /*
 Ejercicios de esta prueba:
 
@@ -48,21 +49,36 @@ Subir controlTema2recu.js a vuestro repositorio en github antes de la finalizaci
 
 //Ejercicio 3
 
-// let romboNumerico=(tamaño)=>{
-//     for(let i=0;i<=tamaño;i++){
-//       let linea="";
-//       for(let j=0;j<=tamaño-i;j){
-//         linea  += "";
+// let romboNumerico = tamaño => {
+    
+
+//       for(let i=1;i<=tamaño;i++){
+//           let linea=".";
+//           for(let k=1;k<=tamaño-i;k++){
+//               linea+=".";
+//           }
+//           for(let j=1;j<=i*2-1;j++){
+//               linea+=j;
+  
+//           }
+//           console.log(linea);
 //       }
-//       for(let n=0;n<=tamaño-i-j;n++){
-//          linea+="*";
+//       for( let n=tamaño;n>=0;n--){
+//           let linea1="";
+//           for(let p=1;p<=tamaño-n+2;p++){
+//               linea1+=".";
+//           }
+//           for(let l=tamaño-1;l<=n*2-1;l++){
+  
+//               linea1+=l;
+//           }
+//           console.log(linea1);
 //       }
-//       console.log(linea);
-//     }
-//   };
+//   }
+  
   
 //   romboNumerico(4);
-
+  
 
 
   //Ejeerccio 1
@@ -104,3 +120,19 @@ Subir controlTema2recu.js a vuestro repositorio en github antes de la finalizaci
 // console.log( separa("hoy") );  // (cuando no hay segundo parámetro o es null o cadena vacía se separan todas las letras) devuelve el array ["h", "o", "y"] 
 // console.log( separa("alegre<->contento<->feliz","<->") );  // (el separador puede ser de más de un carácter) devuelve el array ["alegre", "contento", "feliz"] 
 
+//ejercicio2
+
+  function junta(array=[],union){
+    let texto="";
+    for(let i=0;i<=array.length-1;i++){
+        if (union===union){
+            texto+=array[i]+union;
+              
+        }else if(union===null || union===undefined || union===""){
+            texto+=array[i];
+        }
+    }
+
+    return texto;
+}
+console.log( junta(["Hola", "Don", "Pepito,", "hola"] , "<->") );
