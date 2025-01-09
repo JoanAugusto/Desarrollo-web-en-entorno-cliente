@@ -1,0 +1,103 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+
+
+
+
+
+body{
+    background: -webkit-linear-gradient(90deg, #000000,#1e0d21,#30008a,#210240);background: linear-gradient(90deg, #000000,#1e0d21,#30008a,#210240);
+    display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+    
+   
+}
+    .firstMain{
+        background-color:#210240;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.2fr 1fr;
+        border-radius:2em ;
+        height: 90vh;
+        width: 40%;
+        margin-top: 3%;
+        column-gap: 2%;
+        box-shadow: white 1px 0px 40px;
+        
+    }
+        .title{
+           
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .title h1{
+                color: white;
+                text-shadow: white 1px 0 10px;
+                font-size:250%;
+            }
+           
+        .container-form{
+            
+            grid-column-start:1;
+            grid-column-end:span 2;
+            display: flex;
+            justify-content: center;
+          
+        }
+            .container-form form{
+                grid-column-start:1;
+                grid-column-end:span 2;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+            .container-form input{
+                height: 40%;
+                width: 50%;
+                border-radius: 1em;
+                border: white;
+                box-shadow:white 1px 0px 10px ;
+                
+            }
+            .container-form button{
+                height: 40%;
+                width: 14%;
+                margin-left: 2%;
+                border-radius:1em ;
+                border: white;
+                box-shadow:white 1px 0px 10px ;
+                background-color:#30008a ;
+            }
+        .container-tasks{
+            background-color:#1e0d21;
+            
+        }
+            .container-tasks p{
+                color: white;
+                justify-self: center;
+                text-shadow: white 1px 0 10px;
+            }
+        .container-tasks-completed{
+            background-color: #1e0d21;
+        }
+            .container-tasks-completed p{
+                color: white;
+                justify-self: center;
+                text-shadow: white 1px 0 10px;
+            }
+        hr{
+            margin-top: 2%;
+            grid-column-start:1;
+            grid-column-end:span 2;
+            height: 0;
+            box-shadow:white 1px 0px 10px ;
+        }

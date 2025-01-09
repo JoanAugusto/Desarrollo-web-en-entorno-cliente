@@ -81,44 +81,44 @@ Subir controlTema2recu.js a vuestro repositorio en github antes de la finalizaci
   
 
 
-  //Ejeerccio 1
-// function separa(cadena,separador){
-//     let array1=[]//array auxiliar para guiardar solo por casos raros en separador
+  // Ejeerccio 1
+function separa(cadena,separador){
+    let array1=[]//array auxiliar para guiardar solo por casos raros en separador
     
-//     if(!separador){//en caso de que el separador este vacio 
+    if(!separador){//en caso de que el separador este vacio 
         
-//        for(let i=0;i<cadena.length;i++){
-//             array1.push(cadena[i]);
-//        }
+       for(let i=0;i<cadena.length;i++){
+            array1.push(cadena[i]);
+       }
 
-//         return array1;
-//     }
+        return array1;
+    }
 
-//     let array2=[];
-//     let parte="";
-//     //Ahora en caso de que el separador este por eso busvamos con la lent
-//         for( let j=0;j<cadena.length;j++){
-//             //tratamos de buscar el separador en cadena
-//             if(cadena.slice(j,j+separador.length)===separador){
+    let array2=[];
+    let parte="";
+    //Ahora en caso de que el separador este por eso busvamos con la lent
+        for( let j=0;j<cadena.length;j++){
+            //tratamos de buscar el separador en cadena
+            if(cadena.slice(j,j+separador.length)===separador){
                 
-//                 array2.push(parte);//si lo encuntra lo guarda
-//                 parte=""; //reinicimaos cadena
-//                 j+= separador.length-1 //slatamos al lrgo del separador
-//             }else{
-//                 // agragamo el caracter a la parte acumuada en si al string vavio que hucimos
-//                 parte+=cadena[j];
-//             }
+                array2.push(parte);//si lo encuntra lo guarda
+                parte=""; //reinicimaos cadena
+                j+= separador.length-1 //slatamos al lrgo del separador
+            }else{
+                // agragamo el caracter a la parte acumuada en si al string vavio que hucimos
+                parte+=cadena[j];
+            }
 
-//         }
-//         array2.push(parte);
-//         return array2 ; 
+        }
+        array2.push(parte);
+        return array2 ; 
         
-// }
+}
 
-// console.log( separa("Hola Don Pepito, hola", " ") );  // (el segundo parámetro es un espacio) devuelve el array ["Hola", "Don", "Pepito,", "hola"] 
-// console.log( separa("sal-pimienta-limón-", "-") );  // devuelve el array ["sal", "pimienta", "limón", ""] 
-// console.log( separa("hoy") );  // (cuando no hay segundo parámetro o es null o cadena vacía se separan todas las letras) devuelve el array ["h", "o", "y"] 
-// console.log( separa("alegre<->contento<->feliz","<->") );  // (el separador puede ser de más de un carácter) devuelve el array ["alegre", "contento", "feliz"] 
+console.log( separa("Hola Don Pepito, hola", " ") );  // (el segundo parámetro es un espacio) devuelve el array ["Hola", "Don", "Pepito,", "hola"] 
+console.log( separa("sal-pimienta-limón-", "-") );  // devuelve el array ["sal", "pimienta", "limón", ""] 
+console.log( separa("hoy") );  // (cuando no hay segundo parámetro o es null o cadena vacía se separan todas las letras) devuelve el array ["h", "o", "y"] 
+console.log( separa("alegre<->contento<->feliz","<->") );  // (el separador puede ser de más de un carácter) devuelve el array ["alegre", "contento", "feliz"] 
 
 //ejercicio2
 
