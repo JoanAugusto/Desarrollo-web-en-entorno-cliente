@@ -59,15 +59,20 @@ body{
                 display: flex;
                 justify-content: center;
                 width: 100%;
+                ;
             }
+
             .container-form input{
                 height: 40%;
-                width: 50%;
+                width: 20%;
                 border-radius: 1em;
                 border: white;
                 box-shadow:white 1px 0px 10px ;
-                
+                transition:width,ease-in-out,1s;
             }
+                .container-form input:hover{
+                    width: 50%;
+                }
             .container-form button{
                 height: 40%;
                 width: 14%;
@@ -76,7 +81,16 @@ body{
                 border: white;
                 box-shadow:white 1px 0px 10px ;
                 background-color:#30008a ;
+                transition: height ,width,ease-in-out,1s;
+                
             }
+                .container-form button:hover{
+                    height: 40%;
+                    width: 18%;
+                }
+            
+            
+              
         .container-tasks{
             background-color:#1e0d21;
             
@@ -86,6 +100,25 @@ body{
                 justify-self: center;
                 text-shadow: white 1px 0 10px;
             }
+            .titleDescription{
+                color: white;
+                text-shadow: white 1px 0 10px;
+                font-size:120%;
+                list-style: none;
+                display: flex;
+                justify-content:space-around;
+                align-items: center;
+            }
+                .titleDescription input{
+                    transform:scale(140%);
+                }
+                    .titleDescription button{
+                        border: white;
+                        border-radius: 0.4em;
+                        width: auto;
+                        box-shadow:white 1px 0px 10px ;
+
+                    }
         .container-tasks-completed{
             background-color: #1e0d21;
         }
