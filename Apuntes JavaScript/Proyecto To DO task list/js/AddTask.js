@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded',principal);
         let lists=
            taskss.map(t=>
             `
-                <li class="titleDescription" data-id="${t.id}"><input type="checkbox" id="check">${t.description}
+                <li class="titleDescription" data-id="${t.id}"><input type="checkbox" id="check">${t.description}.<p class="styleDate"> ${t.deadline}</p>
                 <button type="delete" id="delete">Eliminar</button></li>
 
             `);
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded',principal);
             const Task={
                 id:String(Date.now()),
                 description:evento.target.task.value,
-                deadline:'Fecha',
+                deadline:evento.target.date.value,
                 completed:false,
                 completionDate:null
             };
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded',principal);
             const lists=
            
             `
-                <li class="titleDescription" data-id="${Task.id}"><input type="checkbox" id="check">${Task.description}
+                <li class="titleDescription" data-id="${Task.id}"><input type="checkbox" id="check">${Task.description} .<p class="styleDate"> ${Task.deadline}</p>
                 <button type="delete" id="delete">Eliminar</button></li>
 
             `;

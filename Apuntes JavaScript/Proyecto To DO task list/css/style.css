@@ -62,7 +62,7 @@ body{
                 ;
             }
 
-            .container-form input{
+            .writeTask{
                 height: 40%;
                 width: 20%;
                 border-radius: 1em;
@@ -70,8 +70,21 @@ body{
                 box-shadow:white 1px 0px 10px ;
                 transition:width,ease-in-out,1s;
             }
-                .container-form input:hover{
+            
+                .writeTask:hover{
                     width: 50%;
+                }
+            .dateSelection{
+                height: 40%;
+                width: 22%;
+                border-radius: 1em;
+                border: white;
+                box-shadow:white 1px 0px 10px ;
+                transition:width,ease-in-out,1s;
+                margin-left: 1%;
+            }
+                .dateSelection:hover{
+                    width: 28%;
                 }
             .container-form button{
                 height: 40%;
@@ -103,7 +116,8 @@ body{
             .titleDescription{
                 color: white;
                 text-shadow: white 1px 0 10px;
-                font-size:120%;
+                font-size:100%;
+                margin-bottom: 1%;
                 list-style: none;
                 display: flex;
                 justify-content:space-around;
@@ -119,6 +133,16 @@ body{
                         box-shadow:white 1px 0px 10px ;
 
                     }
+                        .titleDescription p{
+                            color:blueviolet;
+                            text-shadow: blueviolet 1px 1px 200px;
+                            font-size:100%;
+                            margin-bottom: 1%;
+                            list-style: none;
+                            display: flex;
+                            justify-content:space-around;
+                            align-items: center;
+                        }
         .container-tasks-completed{
             background-color: #1e0d21;
         }
