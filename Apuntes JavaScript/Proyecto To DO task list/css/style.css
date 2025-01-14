@@ -158,3 +158,18 @@ body{
             height: 0;
             box-shadow:white 1px 0px 10px ;
         }
+        .eliminateCompleted{
+            height: auto;
+            width: 14%;
+            margin-left: 2%;
+            border-radius:1em ;
+            border: white;
+            box-shadow:white 1px 0px 10px ;
+            background-color:#30008a ;
+            transition: height ,width,ease-in-out,1s;
+        }
+                .eliminateCompleted:hover{
+                    height: auto;
+                    width: 18%;
+                }
+            

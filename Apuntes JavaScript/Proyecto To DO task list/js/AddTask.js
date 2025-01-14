@@ -15,7 +15,16 @@ const KEY_COMPLETED='tasksListCompleted';
         const $ContentDivtasks=document.getElementById('tasks');
         //Añadimos las tareas del LocalStorage en el DOM
         const taskss=JSON.parse(localStorage.getItem(KEY_LOCAL));//volvemos de JSON a Array de Objetos
+
+        if (taskss === null || !Array.isArray(taskss)) {//cunado recargamos los arrays 
+            localStorage.setItem(KEY_LOCAL,'[]');
+            return;
+        }
         const taskssCompleted=JSON.parse(localStorage.getItem(KEY_COMPLETED));//volvemos de JSON a Array de Objetos
+        if (taskssCompleted === null || !Array.isArray(taskssCompleted)) {//cunado recargamos los arrays 
+            localStorage.setItem(KEY_COMPLETED,'[]');
+            return;
+        }
         //Evento para eliminar un tarea
          $ContentDivtasks.addEventListener('click',deleteTask);
 
@@ -25,10 +34,15 @@ const KEY_COMPLETED='tasksListCompleted';
 
         //Evento para representar los datos guardados en Completed
         //capturamos el div de completado
+       const $divCompleted=document.getElementById('tasks-completed');
+       let newList=
+       taskssCompleted.map(tc=>`
+         <li class="titleDescription" data-id="${tc.id}"><input type="checkbox" id="check">${tc.description}.<p class="styleDate"> ${tc.deadline}</p>
+                </li>
        
-        const $ContentDivtasksCompleted=document.getElementById('tasks-completed');
-  
-        $ContentDivtasksCompleted.addEventListener('click',AddTasksCompleted);
+       `);
+       const newTemplate=`<ul> ${newList}</ul>`;
+       $divCompleted.innerHTML+=newTemplate
 
         
         let lists=
@@ -41,16 +55,11 @@ const KEY_COMPLETED='tasksListCompleted';
             const template=`<ul> ${lists}</ul>`;
             $ContentDivtasks.innerHTML=template;
 
-            let listsCompleted=
-           taskssCompleted.map(tc=>
-            `
-                <li class="titleDescription" data-id="${tc.id}">${tc.description}.<p class="styleDate"> ${tc.deadline}</p>
-               
-
-            `);
-            const templates=`<ul> ${listsCompleted}</ul>`;
-            $ContentDivtasksCompleted.innerHTML=templates;
+            $divCompleted.addEventListener('click',deleteAllCompleted);
+           
     }
+
+    
       
         function addTasks(evento){
             evento.preventDefault();//Al hacer clic en el botón "Enviar", evitar que se envíe un formulario
@@ -96,17 +105,14 @@ const KEY_COMPLETED='tasksListCompleted';
         function deleteTask(evento){
            
             // salida prematura si el target no es un botón.
-                if(evento.target.tagName!=='BUTTON') return;
-                if(evento.target.textContent !=='Eliminar ') return;
+            if (evento.target.tagName!=='BUTTON') return;
+            if (evento.target.textContent !== 'Eliminar') return;
             //Evento.target.parentElement.firstElement es la li--> Esto esta mal lo que hara es ir eliminado nuestro tags dentro del padre , primero los hijos y despues los padres
             //lo corrscto es esto evento.target.parentElement es la li
             //dataset.id  hace referencia el atributo data-id es mas el id de los li.
             //esto es para el local storage
-            
             deleteTaskofLocalStorage(evento.target.parentElement.dataset.id);
-
-            //eliminamos la lista del DOM
-            evento.target.parentElement.remove();//buscamos siempre l referencia de lo que queramos eliminar con console.dir, simepre
+            evento.target.parentElement.remove();
         }
         // //Segunda parte del eliminar
 
@@ -148,6 +154,7 @@ const KEY_COMPLETED='tasksListCompleted';
               }
               
             }
+           
             deleteTaskCompletedofLocalStorage($idListInput);
             evento.target.parentElement.remove();//buscamos siempre l referencia de lo que queramos eliminar con console.dir, siempre debemos borrar la lista que s el padre del check
         }
@@ -164,26 +171,20 @@ const KEY_COMPLETED='tasksListCompleted';
              localStorage.setItem(KEY_LOCAL,JSON.stringify(filterTasks));
         }
         
-      //Part of the add tasks that have been completed
+      //part of elimintaed completed
+      function deleteAllCompleted(evento){
+        if (evento.target.tagName!=='BUTTON') return;
+        if (evento.target.textContent !== 'Eliminar') return;
 
-        function AddTasksCompleted(){
-           
-            const tasksCompleted=JSON.parse(localStorage.getItem(KEY_COMPLETED));//volvemos de JSON a Array de Objetos
-            alert(template);
-            //add task on DOM 
-            const $taskDivCompleted = document.getElementById('tasks-completed');
-            const listsCompleted=
-           
-            `
-                <li class="titleDescription" data-id="${tasksCompleted.id}">${tasksCompleted.description} .<p class="styleDate"> ${tasksCompleted.deadline}</p>
-                
+       
 
-            `;
-            const template=listsCompleted;
-           
-            $taskDivCompleted.innerHTML+=template;//Actualizamos constantemente las listas 
+        //eliminamos la lista del DOM
+        evento.target.parentElement.remove();//buscamos siempre l referencia de lo que queramos eliminar con console.dir, simepre
+            
+            localStorage.removeItem(KEY_COMPLETED);
 
-        }
+      }
+       
 
         /*
             1º Cosa a valorar , debemos pensar que no es lo mismo el primer document que hicimos que eso lo que hace es manipular todo antes que todo los eventos que creamos depues de la funcion creado primer
