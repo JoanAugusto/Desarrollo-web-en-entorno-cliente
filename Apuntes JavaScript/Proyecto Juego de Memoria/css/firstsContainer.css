@@ -1,0 +1,70 @@
+.container-text-start{
+
+}
+    .container-text-start h1{
+        color:yellowgreen;
+        text-shadow: yellowgreen 1px 0px 20px;
+
+    }
+        .container-choose{
+            display: flex;
+            width: 100%; 
+            justify-content: center;
+            justify-content: space-around;
+
+        }   
+           
+
+            .choose-dificulty{
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-template-rows: 0.6fr 0.6fr 0.6fr;
+
+            }
+                .choose-dificulty select{
+                    height: 50%;
+                    align-self: center;
+                    border-radius: 0.5em;
+                    border: none;
+                }
+                .try{
+                    grid-row: 2/3;
+                }
+        .choose-card{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            height: 10%;
+        }
+            .choose-card select{
+                height: 50%;
+                align-self: center;
+                border-radius: 0.5em;
+                border: none;
+            }
+        .container-reset{
+
+        }
+            .container-reset button{
+                width: 30vh;
+                height: 20%;
+                border-radius: 0.5em;
+                border: none;
+            }
+    
+.container-board{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+     width: 70%;
+     height: 65vh;
+     row-gap: 4%;
+     column-gap: 4%;
+    
+  
+ 
+
+}
+    .pieceOfboard{
+        background-color: cadetblue;
+        border-radius: 0.5em;
+    }
