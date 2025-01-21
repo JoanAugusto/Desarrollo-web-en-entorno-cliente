@@ -25,7 +25,17 @@ function principal(){
     //añadimos contenido al contenedor
     $containerBoard.addEventListener('click',contentOfBoard);
 
-   
+   const $containerImages=document.getElementById('containerBoard');
+   $containerImages.addEventListener('click',changeColour);
+}
+
+function changeColour(evento){
+   console.dir(evento.target);
+    const $div=evento.target;
+    
+    if($div){
+        $div.cla
+    }
 }
 
 function contentOfBoard(evento){
@@ -40,7 +50,7 @@ const valueSelect=evento.target.value;
             const newDiv=
             `
                  <div class="pieceOfboard" id="containerImages"><img src=${imagesforShow[i]}></div>
-                 <div class="pieceOfboard"><img class="show" src=${imagesforShow[i]}></div>
+                 <div class="pieceOfboard" id="containerImages"><img src=${imagesforShow[i]}></div>
             `;
 
            
@@ -48,4 +58,5 @@ const valueSelect=evento.target.value;
             $board.innerHTML+=newDiv;
        }
     }
+
 }   
