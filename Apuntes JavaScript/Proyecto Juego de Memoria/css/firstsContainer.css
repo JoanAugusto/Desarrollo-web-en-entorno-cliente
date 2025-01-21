@@ -1,3 +1,5 @@
+
+/* Este css va dirigido a el cuerpo de la estructura html , no incluye las imagenes debido a separación de archivos */
 .container-text-start{
 
 }
@@ -51,13 +53,17 @@ img{
                 border: none;
             }
         .container-reset{
-           
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           column-gap: 2%;
+           grid-template-rows: 1fr;
         }
             .container-reset button{
                 width: 30vh;
                 height: 20%;
                 border-radius: 0.5em;
                 border: none;
+                
             }
     
 .container-board{
@@ -71,8 +77,4 @@ img{
   
  
 
-}
-    .pieceOfboard{
-        /* background-color: cadetblue; */
-        border-radius: 0.5em;
-    }
+}  
