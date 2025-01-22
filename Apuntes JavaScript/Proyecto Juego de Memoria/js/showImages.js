@@ -16,6 +16,8 @@ const imagesforShow=[
 
 ];
 
+let anteriorCarta=null;
+let posteriorCarta=null;
 //la carga de los scripts primero despues las etiquetas html
 
 document.addEventListener('DOMContentLoaded',principal);
@@ -25,17 +27,66 @@ function principal(){
     //añadimos contenido al contenedor
     $containerBoard.addEventListener('click',contentOfBoard);
 
-   const $containerImages=document.getElementById('containerBoard');
-   $containerImages.addEventListener('click',changeColour);
+  const $listImg=document.getElementById('containerBoard');
+  $listImg.addEventListener('click',changeColour);
+
+  //Capturación de la primera carta seleccionada
+
+     //const $img1 =document.getElementById('containerBoard');
+  $listImg.addEventListener('click',capture1);
+  //Hacemo slo mismo para capturar el segundo
+  //const $img2 =document.getElementById('containerBoard');
+   $listImg.addEventListener('click',capture2);
 }
 
-function changeColour(evento){
-   console.dir(evento.target);
-    const $div=evento.target;
-    
-    if($div){
-        $div.cla
+
+    function capture1(evento){
+        console.dir(evento.target.firstChild.currentSrc);//Capturacion de la url del primera carta
+        const domImg1=evento.target.firstChild.currentSrc;
+        if(anteriorCarta===null && domImg1){
+            anteriorCarta=domImg1;
+           console.log(`funcion 1 ${anteriorCarta}`);
+        }
+        
+        
+
+      
+   
     }
+    function capture2(evento){
+        const domImg2=evento.target.firstChild.currentSrc;
+        if( anteriorCarta!==null && posteriorCarta===null && domImg2){
+            posteriorCarta=domImg2;
+              console.log(`funcion 2 ${posteriorCarta}`);
+            
+        }
+
+        // if( posteriorCarta===null){
+        //     posteriorCarta=evento.target.firstChild.currentSrc;
+        //     console.log(`funcion 2 ${posteriorCarta}`);
+        // }
+
+        
+    }
+   
+    
+    
+   
+
+
+function changeColour(evento){
+    console.dir(evento.srcElement.className=='pieceOfboard');
+    
+
+        if( evento.srcElement.className=='pieceOfboard' ){
+            const divList=evento.target.id;
+            const $div=document.getElementById(divList);
+            $div.classList.add('quitColour');
+        }else{
+            return;
+        }
+   
+
 }
 
 function contentOfBoard(evento){
@@ -49,8 +100,9 @@ const valueSelect=evento.target.value;
            
             const newDiv=
             `
-                 <div class="pieceOfboard" id="containerImages"><img src=${imagesforShow[i]}></div>
-                 <div class="pieceOfboard" id="containerImages"><img src=${imagesforShow[i]}></div>
+                 <div class="pieceOfboard" id=${i}><img data-id=${i} src=${imagesforShow[i]}></div>
+                  <div class="pieceOfboard" id=${i+17}><img   data-id=${i} src=${imagesforShow[i]}></div>
+                
             `;
 
            
