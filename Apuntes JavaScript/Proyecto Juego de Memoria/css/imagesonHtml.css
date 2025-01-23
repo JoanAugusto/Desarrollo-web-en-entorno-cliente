@@ -1,15 +1,20 @@
-/* Este css va destinado a las imagenes y voltearlas tambien */
-.pieceOfboard{
+.pieceOfboard {
     background-color: cadetblue;
     border-radius: 0.5em;
-    
+    cursor: pointer;
 }
-     .pieceOfboard img{    /*Esto es para dejarlo asi de predeterminado hare nueva clase para que se vuelva a ver */
-        visibility: hidden;
-    }
-        .quitColour{
-            background-color: red;
-        }
 
+.pieceOfboard img {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
- 
+.quitColour {
+    background-color: white;
+}
+
+.quitColour img {
+    visibility: visible;
+}
