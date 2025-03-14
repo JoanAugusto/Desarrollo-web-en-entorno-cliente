@@ -1,0 +1,12 @@
+
+#largeImg{
+    width: 45%;
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin-left: 0%;
+}
+ul li{
+    padding: 1%;
+}
