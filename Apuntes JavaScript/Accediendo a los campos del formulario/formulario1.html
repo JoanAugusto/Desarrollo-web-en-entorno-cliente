@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de ejemplo</title>
+</head>
+
+<body>
+    <h1>Formulario de ejemplo</h1>
+    <form>
+        <fieldset>
+            <legend>Textos</legend>
+            <p>Nombre: <input type="text" name="nombre" size="30" value="Juan Pérez"></p>
+            <p>Contraseña: <input type="password" name="contrasena" size="27" value="123456"></p>
+            <p>Correo: <input type="email" name="correo" size="40" value="juan.perez@example.com"></p>
+            <p>Teléfono: <input type="tel" name="telefono" value="666123456"></p>
+            <p>Edad: <input type="number" name="edad" value="25"></p>
+            <p>URL: <input type="url" name="url" size="40" value="https://www.ejemplo.com"></p>
+            <p>Búsqueda: <input type="search" name="busqueda" size="40" value="Formulario HTML"></p>
+            <p>Color: <input type="color" name="color" value="#ff5733"></p>
+            <p>Texto grande: <textarea name="textarea" rows="10" cols="50">Esto es un texto de prueba.</textarea></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Radios (marca uno)</legend>
+            <p>Capital de Noruega:
+                <input type="radio" name="p1" value="1"> Copenhague
+                <input type="radio" name="p1" value="2"> Helsinki
+                <input type="radio" name="p1" value="3" checked> Oslo
+            </p>
+            <p>Fecha de la Revolución francesa:
+                <input type="radio" name="p2" value="1"> 1492
+                <input type="radio" name="p2" value="2" checked> 1789
+                <input type="radio" name="p2" value="3"> 1917
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Checkboxs (marca más de uno)</legend>
+            <label><input type="checkbox" name="pintura" checked>Pintura</label>
+            <label><input type="checkbox" name="musica">Música</label>
+            <label><input type="checkbox" name="cine" checked>Cine</label>
+        </fieldset>
+        <fieldset>
+            <legend>Tiempo</legend>
+            <p>Hora: <input type="time" name="hora" value="12:30"></p>
+            <p>Fecha: <input type="date" name="fecha" value="2025-03-15"></p>
+            <p>Fecha y hora: <input type="datetime-local" name="fechaHora" value="2025-03-15T12:30"></p>
+            <p>Semana: <input type="week" name="semana" value="2025-W11"></p>
+            <p>Mes: <input type="month" name="mes" value="2025-03"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Desplegables</legend>
+            <p>Datalist: <input list="browsers" value="Google Chrome">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option selected value="Google Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+            </p>
+            <p>Select: <select name="Seleccion">
+                            <option value="Rojo " selected>rojo</option>
+                            <option value="Verde" >verde</option>
+                        </select>
+            </p>
+            <p>Select multiple: <select multiple name="drawfs" id="drawfs">
+                <option selected>Gruñón</option>
+                <option>Feliz</option>
+                <option selected>Dormilón</option>
+                <option>Tímido</option>
+                <option>Estornudo</option>
+                <option>Tontín</option>
+                <option>Doc</option>
+              </select></p>
+        </fieldset>
+        <fieldset>
+            <legend>Rangos</legend>
+            <p>Rango: <input type="range" name="rango1" min="5" max="10" step="0.01" value="7.5"> </p>
+            <p>Rango con marcas:
+                <input type="range" name="rango2" list="tickmarks" value="50">
+
+                <datalist id="tickmarks">
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+            </datalist>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Archivo</legend>
+            <p><input type="file" name="archivo"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Botones</legend>
+            <p><input type="submit" value="Enviar"></p>
+            <p><input type="button" value="Haz clic"></p>
+        </fieldset>
+    </form>
+
+    <div id="valores"></div>
+
+    <script src="./camposFormulario.js"></script>
+</body>
+
+</html>
